@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Color Mapping{% endblock %} {% block
+content %}
+<form method="POST">
+  <h3 align="center">Color Mapping</h3>
+  <div class="form-group">
+    <label for="happy">Happy</label>
+    <select name="happy" id="happy">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="yellow">yellow</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="sad">Sad</label>
+    <select name="sad" id="sad">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="yellow">yellow</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="energetic">Energetic</label>
+    <select name="energetic" id="saenergeticd">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="yellow">yellow</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="calm">Calm</label>
+    <select name="calm" id="calm">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="yellow">yellow</option>
+    </select>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
