@@ -39,7 +39,9 @@ def getInfo():
     #mood = session["mood"]
     if "mapping" in session: 
         print(session["mapping"])
-        return {"tempo": session["tempo"],  "color": session["mapping"][session["mood"]]}
+        #return {"tempo": session["tempo"],  "color": session["mapping"][session["mood"]]}
+        return session["tempo"] + " " + session["mapping"][session["mood"]]
+
     else:
         return "1"
  
