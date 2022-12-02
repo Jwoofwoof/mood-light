@@ -17,13 +17,14 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 SPOTIFY_GET_CURRENT_TRACK_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
 #https://developer.spotify.com/console/get-users-currently-playing-track/?market=&additional_types=
-ACCESS_TOKEN = 'BQAxzpCiWn32sK9F9l10UM2fbkw11O7rVTeKxek1uOdhVwOKx1J-vYNTPDsTxP53Tj-_feX0afbrM2qD4mPZuIxBKrcg25UwpO-DLZmMWEKgU-MOCfFOECNgwQHN2NudGX1tgnCD5FdAb6EgbGv6KrJud9727lETUQ5yeNP4RKd1RzPs4cu-DYMOHd3u'
-CLIENT_ID = '42e8068c195d4dc281219605822bb26b'
-CLIENT_SECRET = 'aa34aa6510b144b8a3cb104224882943'
+ACCESS_TOKEN = 'BQDiarmtKvD_9ljswzZe_3dt3bqyiIG4R0qzXhMx6tTA8i9VD8mzxo-l2QrnLCxSBWnR-Bc2e6jRccdprCqqJlKl9qJLxyN7WEJbktlIK-o21PpoLkxI4rLmtzkzbiWJfgJEbfpnvE7VPSaBme0Je-rjlwIeGzxhWPAEuu-A4UkEp74B-czFANnrv7Dc'
+CLIENT_ID = '1ef70d044f5c4ab2ac32a3fd8cb9a5c1'
+CLIENT_SECRET = '56a2ecbda2574448af8850c12b6b7cdd'
 
 
-MODEL_FILENAME = 'RandomForestNoKey.sav'
+MODEL_FILEPATH = 'models/RandomForestNoKey.sav'
 URL = 'http://172.20.10.10:3000/'
+# URL = 'http://172.30.68.238:3000/'
 
 
 def get_current_track(access_token):
@@ -137,7 +138,7 @@ def main():
 	w = WrapperClass()
 	w.doAuth()
 	current_track_id = None
-	filename = MODEL_FILENAME
+	filename = MODEL_FILEPATH
 	loaded_model = pickle.load(open(filename, 'rb'))
 
 	while True:
